@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
               updateMovieDetails(data);
-              e.preventDefault
+              e.preventDefault();
             })
             .catch(error => console.log(error));
         });
@@ -55,10 +55,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     buyTicketButton.addEventListener('click', function(e) {
+      e.preventDefault();
       if (availableTickets > 0) {
-        availableTickets--;
-        movieAvailableTickets.textContent = `Available Tickets: ${availableTickets}`;
-        e.preventDefault
+        movie.tickets_sold += 1;
+        const updatedAvailableTickets = movie.capacity - movie.tickets_sold;
+        movieAvailableTickets.textContent = `Available Tickets: ${updatedAvailableTickets}`;
+
+        if (updatedAvailableTickets === 0) {
+          buyTicketButton.disabled = true;
+          buyTicketButton.textContent = 'Sold Out';
+        }
+
+      
+        fetch(`http://localhost:3000/films/${movie.id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            tickets_sold: movie.tickets_sold
+          })
+        })
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.log(error));
       }
     });
   }
