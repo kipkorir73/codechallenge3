@@ -2,22 +2,67 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #abd1c9;
 
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: rgb(240, 13, 13);
 }
 
-h2 {
 
-
-margin-right: 30px;
-}
 button{
   background-color: rgb(228, 228, 235);
   color: red;
   text-transform: uppercase;
 }
+.navbar{
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -40px 36px -28px inset;
+  background-color: aquamarine;
+  .nav .login-container button {
+    float: right;
+    padding: 0px 10px;
+    margin-top: 8px;
+    margin-right: 8px;
+  
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  }
+  
+  nav{
+    margin-left: auto;
+    
+
+  }
+  nav ul{display: flex;
+  list-style: none;
+  color: #741717;
+  
+  }
+  nav ul li{
+    padding-right: 50px;
+    color: #741717;
+    
+  }
+    a{
+    text-decoration: none;
+    padding: 10px;
+  }
+  .container {
+    display: flex;
+  justify-content: space-between;
+  }
+  
+  .allmovies {
+  
+    float: right;
+  }
+  
