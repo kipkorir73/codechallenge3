@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('http://localhost:3000/films/1')
     .then(response => response.json())
     .then(data => {
+      console.log(data);
       updateMovieDetails(data);
     })
     .catch(error => console.log(error));
@@ -16,12 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
         listItem.classList.add('film', 'item');
         filmsList.appendChild(listItem);
 
-        listItem.addEventListener('click', function() {
+        listItem.addEventListener('click', function(e) {
           document.getElementById('main-title').innerHTML = film.title;
           fetch(`http://localhost:3000/films/${film.id}`)
             .then(response => response.json())
             .then(data => {
               updateMovieDetails(data);
+              e.preventDefault
             })
             .catch(error => console.log(error));
         });
@@ -52,10 +54,11 @@ document.addEventListener('DOMContentLoaded', function() {
       buyTicketButton.textContent = 'Buy Ticket';
     }
 
-    buyTicketButton.addEventListener('click', function() {
+    buyTicketButton.addEventListener('click', function(e) {
       if (availableTickets > 0) {
         availableTickets--;
         movieAvailableTickets.textContent = `Available Tickets: ${availableTickets}`;
+        e.preventDefault
       }
     });
   }
