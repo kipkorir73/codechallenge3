@@ -6,9 +6,8 @@ Bliss Movie-Theater is a web application where users can choose the type of movi
 HTML and CSS for the front-end user interface. JavaScript for DOM manipulation and event handling. Jason-server for providing the back-end data.
 ## SCREENSHOTS OF THE BLISS MOVIE-THEATER WEB
 
-<img src= "./bliis.png">
-<img src="./BLISS2.png">
-<img src="./bliss3.png">
+<img src= "./movi.png">
+<img src="./movie2.png">
 
 ## Support and contact details 
 To make a contribution to the code used or any suggestions you can click on the contact link and email me your suggestions.
