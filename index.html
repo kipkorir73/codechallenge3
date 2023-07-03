@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
   <title>BLISS MOVIE THEATER</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div class="navbar">
+    <div class="logo title">
+      <a href="">BLISS
+        MOVIES
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="">HOME</a>
+        </li>
+        <li>
+          <a href="">MOVIES</a>
+        </li>
+        <li>
+          <a href="">EVENTS</a>
+        </li>
+        <li>
+          <a href="">GALLERY</a>
+        </li>
+        <li>
+          <button class="loginn">Login</button>
+        </li>
+        <li>
+          <div class="topnav">
+            <input type="text" placeholder="Search..">
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-  <div >
-    <h1 id="main-title">Bliss Movie Theater</h1>
-    <div id="movie-details">
-      <img id="movie-poster" src="" alt="Movie Poster" width="200px "height="200px">
-      <h2 id="movie-title"></h2>
-      <p id="movie-runtime"></p>
-      <p id="movie-showtime"></p>
-      <p id="movie-available-tickets"></p>
-      <button id="buy-ticket">Buy Ticket</button>
+  <div class="container">
+    <div>
+      <h1 id="main-title">Bliss Movie Theater</h1>
+      <div id="movie-details">
+        <img id="movie-poster" src="" alt="Movie Poster" width="200px" height="200px">
+        <h2 id="movie-title"></h2>
+        <p id="movie-runtime"></p>
+        <p id="movie-showtime"></p>
+        <p id="movie-available-tickets"></p>
+        <button id="buy-ticket">Buy Ticket</button>
+      </div>
+    </div>
+
+    <div class="allmovies">
+      <h2>All Movies</h2>
+      <ul id="films"></ul>
     </div>
   </div>
-  <div class="allmovies">
-    <h2>All Movies</h2>
-    <ul id="films"></ul>
-  </div>
+
   <script src="index.js"></script>
 </body>
 </html>
